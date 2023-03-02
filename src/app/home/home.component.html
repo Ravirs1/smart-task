@@ -1,0 +1,30 @@
+
+<div class="search-box">
+    <form [formGroup]="searchForm">
+        <mat-form-field class="example-full-width">
+
+        <mat-icon matPrefix class="icon-search">search</mat-icon>
+        <mat-label>Search for a country</mat-label>
+        <input (keyup)="onSearchChange('name')" type="text" matInput placeholder="Search for a country" name= "search" formControlName="search">
+     
+        </mat-form-field>
+</form>
+        <select class="filter-region" [(ngModel)]="filterDrop" (change)="onRegionChange('region', $event)">
+            <option value="" disabled selected hidden>Filter by Region</option>
+            <option *ngFor="let region of regions" [value]="region">{{ region }}</option>
+        </select>
+    
+</div>
+<div class="list-container" >
+<mat-card class="example-card" *ngFor="let country of countries" [routerLink]="['/country', country.name]">
+   
+    <img mat-card-image src="{{country.flag}}" >
+    <mat-card-content>
+     <h5>{{ country.name }}</h5>
+     <p><b>Population:</b>{{country.population}}</p>
+     <p><b>Region:</b>{{country.region}}</p>
+     <p><b>Capital:</b>{{country.capital}}</p>
+    </mat-card-content>
+   
+  </mat-card>
+  </div>

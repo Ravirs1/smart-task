@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Nunito Sans", sans-serif;
+    font-size: 14px; 
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.icon-search {
+    padding: 0 !important;
+}
+
+select {
+    color: var(--text-color) !important;
+    background-color: var(--bg-color) !important;
+}
+
+.example-card {
+    color: var(--text-color) !important;
+    background-color: var(--bg-color) !important;
+}
+
+
+.dark-theme {
+    --text-color: hsl(200, 15%, 100%);
+    --input-color: hsl(0,0%,52%);
+    --bg-color: hsl(207,26%,17%);
+    --elements-color: hsl(209,23%,22%);
+}
+
+.light-theme {
+    --text-color: hsl(200, 15%, 8%);
+    --input-color: hsl(0,0%,52%);
+    --bg-color: hsl(0,0%,98%);
+    --elements-color: hsl(0,0%,100%);
+}
+
+mat-form-field  .mat-mdc-text-field-wrapper {
+    background-color: var(--bg-color) !important;
+}
+
+mat-label {
+    color: var(--text-color) !important;
+}

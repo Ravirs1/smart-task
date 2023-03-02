@@ -1,0 +1,35 @@
+.example-card {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+
+.list-container {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.search-box {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.filter-region {
+    width: 10rem;
+    height: 3rem;
+}
+
+@media screen and (max-width:600px) {
+    .example-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    
+    .list-container {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: wrap;
+    }
+}
